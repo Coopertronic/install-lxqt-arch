@@ -56,7 +56,7 @@ while getopts "ahv" option; do
     esac
 done
 
-line_break
+line_break '#'
 echo "this script will install LXQT."
 echo "Are you ready to continue?"
 auto_continue $noConfirm
