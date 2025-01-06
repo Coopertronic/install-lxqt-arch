@@ -60,3 +60,4 @@ line_break '#'
 echo "this script will install LXQT."
 echo "Are you ready to continue?"
 auto_continue $noConfirm
+echo "Running xorg install."
