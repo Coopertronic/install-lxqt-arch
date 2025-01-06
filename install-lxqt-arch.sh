@@ -61,3 +61,18 @@ echo "this script will install LXQT."
 echo "Are you ready to continue?"
 auto_continue $noConfirm
 echo "Running xorg install."
+sudo pacman -S --needed xorg $noConfirm
+echo "Getting LXQT ready."
+sudo pacman -S --needed lxqt xdg-utils ttf-freefont sddm $noConfirm
+echo "Install essentiel software."
+sudo pacman -S --needed libpulse libstatgrab libsysstat lm_sensors network-manager-applet oxygen-icons pavucontrol-qt firewalld firewall-applet $noConfirm
+echo "Installing basic modern software application."
+sudo pacman -S --needed firefox vlc filezilla leafpad xscreensaver archlinux-wallpaper $noConfirm
+sudo systemctl enable sddm
+sudo systemctl enable NetworkManager
+sudo systemctl enable firewalld
+line_break
+echo "LXQT has been installed."
+echo "Do you want to reboot?"
+auto_continue
+reboot
